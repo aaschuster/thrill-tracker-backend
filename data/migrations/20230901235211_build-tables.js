@@ -4,68 +4,88 @@
  */
 exports.up = async function(knex) {
     await knex.schema
-        .createTable("parks-main", table => {
-            table.increments("park-main-id");
+        .createTable("countries", table => {
+            table.increments("countries_id")
+            table.string("name")
+                .notNullable()
+                .unique()
+        })
+        .createTable("states", table => {
+            table.increments("states_id")
+            table.string("name")
+                .notNullable()
+                .unique()
+        })
+        .createTable("chains", table => {
+            table.increments("chains_id")
+            table.string("name")
+                .notNullable()
+                .unique()
+        })
+        .createTable("parks", table => {
+            table.increments("parks_id");
             table.string("name")
                 .notNullable();
-            table.string("chain");
-            table.string("state");
-            table.string("country");
-        })
-        .createTable("rides-main", table => {
-            table.increments("rides-main-id");
-            table.string("name");
-            table.integer("manufacturers-main-id")
+            table.integer("chains_id")
                 .unsigned()
-                .references("manufacturers-main-id")
-                .inTable("manufacturers-main")
+                .references("chains_id")
+                .inTable("chains")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.integer("states_id")
+                .unsigned()
+                .references("states_id")
+                .inTable("states")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.integer("countries_id")
+                .unsigned()
+                .references("countries_id")
+                .inTable("countries")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+        })
+        .createTable("manufacturers", table => {
+            table.increments("manufacturers-id")
+            table.string("name");
+        })
+        .createTable("rides", table => {
+            table.increments("rides_id");
+            table.string("name");
+            table.integer("manufacturers_id")
+                .unsigned()
+                .references("manufacturers_id")
+                .inTable("manufacturers")
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");
             table.integer("duration")
                 .unsigned()
-            table.decimal("track-length")
+            table.decimal("track_length")
                 .unsigned()
             table.integer("inversions")
                 .unsigned()
-            table.decimal("drop-height")
+            table.decimal("drop_height")
                 .unsigned()
         })
-        .createTable("rides-ride-types", table => {
-            table.increments("rides-ride-types");
-            table.integer("ride-types-id")
+        .createTable("ride_types", table => {
+            table.increments("ride-types-id");
+            table.string("ride-type");
+        })
+        .createTable("rides_ride_types", table => {
+            table.increments("rides_ride_types");
+            table.integer("ride_types_id")
                 .unsigned()
                 .notNullable()
-                .references("ride-types-id")
-                .inTable("ride-types")
+                .references("ride_types_id")
+                .inTable("ride_types")
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");
-            table.integer("rides-main-id")
+            table.integer("rides_id")
                 .unsigned()
-                .references("rides-main-id")
-                .inTable("rides-main")
+                .references("rides_id")
+                .inTable("rides")
                 .onDelete("RESTRICT")
-                .onUpdate("RESTRICT");
-            table.integer("rides-custom-id")
-                .unsigned()
-                .references("rides-custom-id")
-                .inTable("rides-custom")
-                .onDelete("RESTRICT")
-                .onUpdate("RESTRICT");                                
-        })
-        .createTable("ride-types", table => {
-            table.increments("ride-types-id");                        
-        })
-        .createTable("manufacturers-main", table => {
-            table.increments("manufacturers-main-id");
-        })
-        .createTable("parks-custom", table => {
-            table.increments("parks-custom-id");
-        })
-        .createTable("rides-custom", table => {
-            table.increments("rides-custom-id");
-        })
-        .createTable("manufactuers-custom", table => {
-            table.increments("manufactuers-custom-id");
+                .onUpdate("RESTRICT");                              
         })
         .createTable("history", table => {
             table.increments("history-id");
@@ -78,13 +98,13 @@ exports.up = async function(knex) {
  */
 exports.down = async function(knex) {
     await knex.schema
-    .dropTableIfExists("parks-main")
-    .dropTableIfExists("rides-main")
-    .dropTableIfExists("rides-ride-types")
-    .dropTableIfExists("ride-types")
-    .dropTableIfExists("manufacturers-main")
-    .dropTableIfExists("parks-custom")
-    .dropTableIfExists("rides-custom")
-    .dropTableIfExists("manufactuers-custom")
-    .dropTableIfExists("history");  
+    .dropTableIfExists("history")
+    .dropTableIfExists("rides_ride_types")
+    .dropTableIfExists("ride_types")
+    .dropTableIfExists("rides")
+    .dropTableIfExists("manufacturers")
+    .dropTableIfExists("parks")
+    .dropTableIfExists("chains")
+    .dropTableIfExists("states")
+    .dropTableIfExists("countries")
 };
