@@ -1,6 +1,9 @@
+const cors = require("cors");
+
 const express = require("express");
 const server = express();
 server.use(express.json());
+server.use(cors());
 
 const parksRouter = require("./routers/parks");
 server.use("/parks", parksRouter);

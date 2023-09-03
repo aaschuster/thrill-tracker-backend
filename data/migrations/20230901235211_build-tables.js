@@ -52,6 +52,12 @@ exports.up = async function(knex) {
         .createTable("rides", table => {
             table.increments("rides_id");
             table.string("name");
+            table.integer("parks_id")
+                .unsigned()
+                .references("parks_id")
+                .inTable("parks")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
             table.integer("manufacturers_id")
                 .unsigned()
                 .references("manufacturers_id")
@@ -68,8 +74,8 @@ exports.up = async function(knex) {
                 .unsigned()
         })
         .createTable("ride_types", table => {
-            table.increments("ride-types-id");
-            table.string("ride-type");
+            table.increments("ride_types_id");
+            table.string("ride_type");
         })
         .createTable("rides_ride_types", table => {
             table.increments("rides_ride_types");
