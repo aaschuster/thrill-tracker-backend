@@ -17,6 +17,9 @@ server.use("/countries", countriesRouter);
 const statesRouter = require("./routers/states");
 server.use("/states", statesRouter);
 
+const ridesRouter = require("./routers/rides")
+server.use("/rides", ridesRouter);
+
 server.use((err, req, res, next) => {
     res.status(err.status || 500).json({
         customMessage: "There was an issue with the server",
