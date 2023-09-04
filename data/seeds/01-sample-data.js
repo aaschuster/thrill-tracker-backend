@@ -881,5 +881,15 @@ exports.seed = async function(knex) {
       rides_id: 48,
       ride_types_id: 2
     }
+  ]),
+  await knex("history").insert([
+    {
+      rides_id: 1,
+      timestamp: new Date("09-03-2023, 12:00 PM").toLocaleString([], {dateStyle: "short", timeStyle: "short"})
+    },
+    {
+      rides_id: 26,
+      timestamp: new Date("09-03-2023, 12:00 PM").toLocaleString([], {dateStyle: "short", timeStyle: "short"})
+    }
   ])
 };
