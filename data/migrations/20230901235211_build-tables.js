@@ -94,7 +94,16 @@ exports.up = async function(knex) {
                 .onUpdate("RESTRICT");                              
         })
         .createTable("history", table => {
-            table.increments("history-id");
+            table.increments("history_id");
+            table.integer("rides_id")
+                .unsigned()
+                .notNullable()
+                .references("rides_id")
+                .inTable("rides")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.string("timestamp")
+                .notNullable();        
         })  
 };
 

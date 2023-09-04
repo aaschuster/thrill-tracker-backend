@@ -372,6 +372,173 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 1
     },
+    {
+      name: "Kingda Ka",
+      manufacturers_id: 15,
+      duration: 28,
+      track_length: 3118,
+      inversions: 0,
+      drop_height: 418,
+      parks_id: 2
+    },
+    {
+      name: "El Toro",
+      manufacturers_id: 15,
+      duration: 102,
+      track_length: 4400,
+      inversions: 0,
+      drop_height: 176,
+      parks_id: 2
+    },
+    {
+      name: "Batman The Ride",
+      manufacturers_id: 29,
+      duration: 90,
+      track_length: 2693,
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Dark Knight",
+      manufacturers_id: 17,
+      duration: 120,
+      track_length: 1213,
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Green Lantern",
+      manufacturers_id: 29,
+      duration: 150,
+      track_length: 4155,
+      inversions: 5,
+      drop_height: 144,
+      parks_id: 2
+    },
+    {
+      name: "Harley Quinn Crazy Train",
+      manufacturers_id: 26,
+      duration: 65,
+      track_length: 1181.1,
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Jersey Devil Coaster",
+      manufacturers_id: 41,
+      duration: 125,
+      track_length: 3000,
+      inversions: 3,
+      parks_id: 2
+    },
+    {
+      name: "Joker",
+      manufacturers_id: 12,
+      track_length: 1019,
+      drop_height: 54,
+      parks_id: 2
+    },
+    {
+      name: "Lil' Devil Coaster",
+      manufacturers_id: 14,
+      duration: 40,
+      track_length: 262.5,
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Medusa",
+      manufacturers_id: 29,
+      duration: 140,
+      track_length: 3985,
+      inversions: 7,
+      drop_height: 132,
+      parks_id: 2
+    },
+    {
+      name: "Nitro",
+      manufacturers_id: 29,
+      duration: 140,
+      track_length: 5394,
+      inversions: 0,
+      drop_height: 215,
+      parks_id: 2
+    },
+    {
+      name: "Runaway Mine Train",
+      manufacturers_id: 27,
+      duration: 120,
+      inversions: 0,
+      drop_height: 39,
+      parks_id: 2
+    },
+    {
+      name: "Skull Mountain",
+      manufacturers_id: 15,
+      duration: 84,
+      track_length: 1377,
+      inversions: 0,
+      drop_height: 37,
+      parks_id: 2
+    },
+    {
+      name: "Superman - Ultimate Flight",
+      manufacturers_id: 29,
+      duration: 126,
+      track_length: 2759,
+      inversions: 2,
+      drop_height: 100,
+      parks_id: 2
+    },
+    {
+      name: "Air Jumbo",
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Big Wheel",
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Cyborg Cyber Spin",
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Justice League: Battle for Metropilis",
+      manufacturers_id: 13,
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "SkyScreamer",
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Twister",
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Wonder Woman Lasso of Truth",
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Zumanjaro: Drop of Doom",
+      manufacturers_id: 15,
+      inversions: 0,
+      parks_id: 2
+    },
+    {
+      name: "Flash: Vertical Velocity",
+      manufacturers_id: 24,
+      track_length: 1430.4,
+      inversions: 0,
+      parks_id: 2
+    },
   ])
   await knex("rides_ride_types").insert([
     {
@@ -557,6 +724,162 @@ exports.seed = async function(knex) {
     {
       rides_id: 25,
       ride_types_id: 2
-    }    
+    },
+    {
+      rides_id: 26,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 26,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 27,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 27,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 28,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 28,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 29,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 29,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 30,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 30,
+      ride_types_id: 2
+    },                
+    {
+      rides_id: 31,
+      ride_types_id: 1
+    },                
+    {
+      rides_id: 31,
+      ride_types_id: 3
+    },    
+    {
+      rides_id: 31,
+      ride_types_id: 4
+    },
+    {
+      rides_id: 32,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 32,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 33,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 33,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 34,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 34,
+      ride_types_id: 4
+    },
+    {
+      rides_id: 35,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 35,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 36,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 36,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 37,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 37,
+      ride_types_id: 3
+    },
+    {
+      rides_id: 38,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 38,
+      ride_types_id: 3
+    },
+    {
+      rides_id: 39,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 39,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 40,
+      ride_types_id: 4
+    },
+    {
+      rides_id: 41,
+      ride_types_id: 3
+    },
+    {
+      rides_id: 42,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 43,
+      ride_types_id: 7
+    },
+    {
+      rides_id: 44,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 45,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 46,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 47,
+      ride_types_id: 2
+    },
+    {
+      rides_id: 48,
+      ride_types_id: 1
+    },
+    {
+      rides_id: 48,
+      ride_types_id: 2
+    }
   ])
 };
