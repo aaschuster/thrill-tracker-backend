@@ -24,4 +24,10 @@ router.post("/", (req, res, next) => {
         .catch(next);
 })
 
+router.delete("/:id", (req, res, next) => {
+    History.del(req.params.id)
+        .then( numDeleted => res.json(numDeleted))
+        .catch(next);
+})
+
 module.exports = router;

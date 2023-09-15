@@ -10,3 +10,7 @@ module.exports.get = id => {
 module.exports.insert = record => {
     return db("history").insert(record);
 }
+
+module.exports.del = id => {
+    return db("history").where("history_id", id).del();
+}
