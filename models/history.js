@@ -14,3 +14,7 @@ module.exports.insert = record => {
 module.exports.del = id => {
     return db("history").where("history_id", id).del();
 }
+
+module.exports.update = (record, id) => {
+    return db("history").where("history_id", id).update(record);
+}
