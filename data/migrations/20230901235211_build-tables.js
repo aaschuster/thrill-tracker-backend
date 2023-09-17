@@ -104,6 +104,11 @@ exports.up = async function(knex) {
                 .onUpdate("RESTRICT");
             table.string("timestamp")
                 .notNullable();        
+            table.string("notes");
+            table.integer("row")
+                .unsigned();
+            table.integer("seat")
+                .unsigned();
         })  
 };
 
