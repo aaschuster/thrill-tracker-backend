@@ -185,7 +185,9 @@ exports.seed = async function(knex) {
       track_length: 5740,
       inversions: 4,
       drop_height: 200,
-      parks_id: 1
+      parks_id: 1,
+      rows: 12,
+      seats: 2
     },
     { 
       name: "Maverick",
@@ -194,7 +196,9 @@ exports.seed = async function(knex) {
       track_length: 4450,
       inversions: 2,
       drop_height: 100,
-      parks_id: 1
+      parks_id: 1,
+      rows: 6,
+      seats: 2
     },
     { 
       name: "Top Thrill Dragster",
@@ -203,7 +207,9 @@ exports.seed = async function(knex) {
       track_length: 2800,
       inversions: 0,
       drop_height: 400,
-      parks_id: 1
+      parks_id: 1,
+      rows: 9,
+      seats: 2
     },
     { 
       name: "Top Thrill 2",
@@ -212,7 +218,9 @@ exports.seed = async function(knex) {
       track_length: 3422,
       inversions: 0,
       drop_height: 400,
-      parks_id: 1
+      parks_id: 1,
+      rows: 10,
+      seats: 2
     },
     {
       name: "Millennium Force",
@@ -221,7 +229,9 @@ exports.seed = async function(knex) {
       track_length: 6595,
       inversions: 0,
       drop_height: 300,
-      parks_id: 1
+      parks_id: 1,
+      rows: 18,
+      seats: 2
     },
     {
       name: "Valravn",
@@ -230,7 +240,9 @@ exports.seed = async function(knex) {
       track_length: 3415,
       inversions: 3,
       drop_height: 214,
-      parks_id: 1
+      parks_id: 1,
+      rows: 3,
+      seats: 8
     },
     {
       name: "Gatekeeper",
@@ -239,7 +251,9 @@ exports.seed = async function(knex) {
       track_length: 4164,
       inversions: 6,
       drop_height: 164,
-      parks_id: 1
+      parks_id: 1,
+      rows: 8,
+      seats: 4
     },
     {
       name: "Raptor",
@@ -248,7 +262,9 @@ exports.seed = async function(knex) {
       track_length: 3790,
       inversions: 6,
       drop_height: 119,
-      parks_id: 1
+      parks_id: 1,
+      rows: 8,
+      seats: 4
     },
     {
       name: "Rougarou",
@@ -257,7 +273,9 @@ exports.seed = async function(knex) {
       track_length: 3900,
       inversions: 4,
       drop_height: 137,
-      parks_id: 1
+      parks_id: 1,
+      rows: 8,
+      seats: 4
     },
     {
       name: "Magnum XL-200",
@@ -266,7 +284,9 @@ exports.seed = async function(knex) {
       track_length: 5106,
       inversions: 0,
       drop_height: 194.7,
-      parks_id: 1
+      parks_id: 1,
+      rows: 18,
+      seats: 2
     },
     {
       name: "Gemini",
@@ -275,7 +295,9 @@ exports.seed = async function(knex) {
       track_length: 3935,
       inversions: 0,
       drop_height: 118,
-      parks_id: 1
+      parks_id: 1,
+      rows: 15,
+      seats: 2
     },
     {
       name: "Blue Streak",
@@ -284,7 +306,9 @@ exports.seed = async function(knex) {
       track_length: 2558,
       inversions: 0,
       drop_height: 72,
-      parks_id: 1
+      parks_id: 1,
+      rows: 12,
+      seats: 2
     },
     {
       name: "Cedar Creek Mine Ride",
@@ -292,7 +316,9 @@ exports.seed = async function(knex) {
       duration: 162,
       track_length: 2540,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      rows: 15,
+      seats: 2
     },
     {
       name: "Corkscrew",
@@ -300,7 +326,9 @@ exports.seed = async function(knex) {
       duration: 120,
       track_length: 2050,
       inversions: 3,
-      parks_id: 1
+      parks_id: 1,
+      rows: 12,
+      seats: 2
     },
     {
       name: "Iron Dragon",
@@ -308,7 +336,9 @@ exports.seed = async function(knex) {
       duration: 120,
       track_length: 2800,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      rows: 14,
+      seats: 2
     },
     {
       name: "Wild Mouse",
@@ -316,7 +346,9 @@ exports.seed = async function(knex) {
       duration: 70,
       track_length: 1312,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      rows: 1,
+      seats: 4
     },
     {
       name: "Wilderness Run",
@@ -324,7 +356,9 @@ exports.seed = async function(knex) {
       duration: 50,
       track_length: 443,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      rows: 8,
+      seats: 2
     },
     {
       name: "Woodstock Express",
@@ -332,7 +366,9 @@ exports.seed = async function(knex) {
       duration: 66,
       track_length: 1099,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      rows: 8,
+      seats: 2
     },
     {
       name: "4x4's",
@@ -379,7 +415,9 @@ exports.seed = async function(knex) {
       track_length: 3118,
       inversions: 0,
       drop_height: 418,
-      parks_id: 2
+      parks_id: 2,
+      rows: 10,
+      seats: 2
     },
     {
       name: "El Toro",
@@ -388,7 +426,9 @@ exports.seed = async function(knex) {
       track_length: 4400,
       inversions: 0,
       drop_height: 176,
-      parks_id: 2
+      parks_id: 2,
+      rows: 18,
+      seats: 2
     },
     {
       name: "Batman The Ride",
@@ -396,7 +436,9 @@ exports.seed = async function(knex) {
       duration: 90,
       track_length: 2693,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      rows: 8,
+      seats: 4
     },
     {
       name: "Dark Knight",
@@ -404,7 +446,9 @@ exports.seed = async function(knex) {
       duration: 120,
       track_length: 1213,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      rows: 1,
+      seats: 4
     },
     {
       name: "Green Lantern",
@@ -413,7 +457,9 @@ exports.seed = async function(knex) {
       track_length: 4155,
       inversions: 5,
       drop_height: 144,
-      parks_id: 2
+      parks_id: 2,
+      rows: 7,
+      seats: 4
     },
     {
       name: "Harley Quinn Crazy Train",
@@ -421,7 +467,9 @@ exports.seed = async function(knex) {
       duration: 65,
       track_length: 1181.1,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      rows: 20,
+      seats: 2
     },
     {
       name: "Jersey Devil Coaster",
@@ -429,14 +477,18 @@ exports.seed = async function(knex) {
       duration: 125,
       track_length: 3000,
       inversions: 3,
-      parks_id: 2
+      parks_id: 2,
+      rows: 12,
+      seats: 1
     },
     {
       name: "Joker",
       manufacturers_id: 12,
       track_length: 1019,
       drop_height: 54,
-      parks_id: 2
+      parks_id: 2,
+      rows: 2,
+      seats: 4
     },
     {
       name: "Lil' Devil Coaster",
@@ -444,7 +496,9 @@ exports.seed = async function(knex) {
       duration: 40,
       track_length: 262.5,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      rows: 6,
+      seats: 2
     },
     {
       name: "Medusa",
@@ -453,7 +507,9 @@ exports.seed = async function(knex) {
       track_length: 3985,
       inversions: 7,
       drop_height: 132,
-      parks_id: 2
+      parks_id: 2,
+      rows: 8,
+      seats: 4
     },
     {
       name: "Nitro",
@@ -462,7 +518,9 @@ exports.seed = async function(knex) {
       track_length: 5394,
       inversions: 0,
       drop_height: 215,
-      parks_id: 2
+      parks_id: 2,
+      rows: 9,
+      seats: 4
     },
     {
       name: "Runaway Mine Train",
@@ -470,7 +528,9 @@ exports.seed = async function(knex) {
       duration: 120,
       inversions: 0,
       drop_height: 39,
-      parks_id: 2
+      parks_id: 2,
+      rows: 15,
+      seats: 2
     },
     {
       name: "Skull Mountain",
@@ -479,7 +539,9 @@ exports.seed = async function(knex) {
       track_length: 1377,
       inversions: 0,
       drop_height: 37,
-      parks_id: 2
+      parks_id: 2,
+      rows: 14,
+      seats: 2
     },
     {
       name: "Superman - Ultimate Flight",
@@ -488,7 +550,9 @@ exports.seed = async function(knex) {
       track_length: 2759,
       inversions: 2,
       drop_height: 100,
-      parks_id: 2
+      parks_id: 2,
+      rows: 8,
+      seats: 4
     },
     {
       name: "Air Jumbo",

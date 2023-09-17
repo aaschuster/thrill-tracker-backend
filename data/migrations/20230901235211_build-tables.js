@@ -72,6 +72,10 @@ exports.up = async function(knex) {
                 .unsigned()
             table.decimal("drop_height")
                 .unsigned()
+            table.integer("rows")
+                .unsigned()
+            table.integer("seats")
+                .unsigned()
         })
         .createTable("ride_types", table => {
             table.increments("ride_types_id");
