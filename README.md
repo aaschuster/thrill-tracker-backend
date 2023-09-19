@@ -1,6 +1,6 @@
 # Thrill Tracker Backend
 
-This project is a RESTful API built with Express and Knex for my thrill-tracker project. This project is still just in the beginning stages of being built but the plan is for it to handle many users and the ride data can be customized/crowd sourced by the user base. 
+This project is a RESTful API built with Express and Knex for my thrill-tracker project. This project is still a work in progress and the plan is for it to handle many users and the ride data can be customized/crowd sourced by the user base.
 
 ### Setup
 
