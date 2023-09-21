@@ -175,7 +175,8 @@ exports.seed = async function(knex) {
     {ride_type: "Water Ride"}, 
     {ride_type: "Dark Ride"}, 
     {ride_type: "Show"}, 
-    {ride_type: "Dining Experience"}
+    {ride_type: "Dining Experience"},
+    {ride_type: "Haunt"}
   ]);
   await knex("rides").insert([
     { 
@@ -603,6 +604,46 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 2
     },
+    {
+      name: "Bloodbath",
+      parks_id: 1
+    },
+    {
+      name: "Midnight",
+      parks_id: 1
+    },
+    {
+      name: "Fearground Freakshow",
+      parks_id: 1
+    },
+    {
+      name: "Slaughter House",
+      parks_id: 1
+    },
+    {
+      name: "The Haunting of Eerie Estate",
+      parks_id: 1
+    },
+    {
+      name: "Clownz: Death Metal Tour",
+      parks_id: 1
+    },
+    {
+      name: "Blood on the Bayou",
+      parks_id: 1
+    },
+    {
+      name: "CornStalkers 2.0: Revenge of the Pumpkin Heads",
+      parks_id: 1
+    },
+    {
+      name: "Cut Throat Cove",
+      parks_id: 1
+    },
+    {
+      name: "Tombstone Terror-tory",
+      parks_id: 1
+    }
   ])
   await knex("rides_ride_types").insert([
     {
@@ -944,6 +985,46 @@ exports.seed = async function(knex) {
     {
       rides_id: 48,
       ride_types_id: 2
+    },
+    {
+      rides_id: 49,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 50,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 51,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 52,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 53,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 54,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 55,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 56,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 57,
+      ride_types_id: 10
+    },
+    {
+      rides_id: 58,
+      ride_types_id: 10
     }
   ]),
   await knex("history").insert([
