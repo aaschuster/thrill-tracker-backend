@@ -24,4 +24,16 @@ router.post("/login", async (req, res, next) => {
         .catch(next);
 })
 
+router.post("/", (req, res, next) => {
+
+    let {username, password} = req.body;
+
+    if(password)
+        password = bcrypt.hashSync(password, 8);
+
+    Users.insert({username: username, password: password})
+        .then( userID => res.json(userID))
+        .catch(next);
+})
+
 module.exports = router;

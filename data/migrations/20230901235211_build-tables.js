@@ -100,7 +100,8 @@ exports.up = async function(knex) {
         .createTable("users", table => {
             table.increments("users_id");
             table.string("username")
-                .notNullable();
+                .notNullable()
+                .unique();
             table.string("email")
                 .unique();
             table.string("password");
