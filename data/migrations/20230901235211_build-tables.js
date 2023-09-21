@@ -97,6 +97,14 @@ exports.up = async function(knex) {
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");                              
         })
+        .createTable("users", table => {
+            table.increments("users_id");
+            table.string("username")
+                .notNullable();
+            table.string("email")
+                .unique();
+            table.string("password");
+        })
         .createTable("history", table => {
             table.increments("history_id");
             table.integer("rides_id")
@@ -104,6 +112,13 @@ exports.up = async function(knex) {
                 .notNullable()
                 .references("rides_id")
                 .inTable("rides")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.integer("users_id")
+                .unsigned()
+                // .notNullable()
+                .references("users_id")
+                .inTable("users")
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");
             table.string("timestamp")
@@ -123,6 +138,7 @@ exports.up = async function(knex) {
 exports.down = async function(knex) {
     await knex.schema
     .dropTableIfExists("history")
+    .dropTableIfExists("users")
     .dropTableIfExists("rides_ride_types")
     .dropTableIfExists("ride_types")
     .dropTableIfExists("rides")

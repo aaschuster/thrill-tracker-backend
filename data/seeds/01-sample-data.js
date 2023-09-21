@@ -2,6 +2,9 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> } 
  */
+
+const bcrypt = require("bcryptjs");
+
 exports.seed = async function(knex) {
   await knex("chains").insert([
     {name: "Cedar Fair"},       //id1
@@ -1027,6 +1030,12 @@ exports.seed = async function(knex) {
       ride_types_id: 10
     }
   ]),
+  await knex("users").insert([
+    {
+      username: "jonnyeg",
+      password: bcrypt.hashSync("pass", 8)
+    }
+  ])
   await knex("history").insert([
     {
       rides_id: 1,
