@@ -15,6 +15,12 @@ router.get("/:id", (req, res, next) => {
         .catch(next);
 })
 
+router.get("/userid/:id", (req, res, next) => {
+    History.getBy({ users_id: req.params.id })
+        .then( records => res.json(records))
+        .catch(next);
+})
+
 router.post("/", (req, res, next) => {
 
     const record = req.body;

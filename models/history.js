@@ -7,6 +7,10 @@ module.exports.get = id => {
     return db("history");
 }
 
+module.exports.getBy = filter => {
+    return db("history").where(filter);
+}
+
 module.exports.insert = record => {
     return db("history").insert(record);
 }
