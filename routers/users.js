@@ -3,8 +3,14 @@ const express = require("express");
 const router = express.Router();
 
 const Users = require("../models/users");
+const {validateLogin} = require("../middleware");
 
-router.post("/login", async (req, res, next) => {
+router.post("/login", validateLogin, async (req, res, next) => {
+
+    const invalidCreds = {
+        status: 401,
+        message: "Invalid credentials"
+    }
 
     let { username, password } = req.body;
 
@@ -16,12 +22,9 @@ router.post("/login", async (req, res, next) => {
                 message: "Login successful",
                 token: token
             })
-            else next({
-                status: 401,
-                message: "Invalid credentials"
-            })
+            else next(invalidCreds)
         })
-        .catch(next);
+        .catch(next(invalidCreds));
 })
 
 router.post("/", (req, res, next) => {
