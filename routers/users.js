@@ -20,7 +20,8 @@ router.post("/login", validateLogin, async (req, res, next) => {
         .then( ([user]) => {
             if(user && bcrypt.compareSync(password, user.password)) res.json({
                 message: "Login successful",
-                token: token
+                token: token,
+                user: user
             })
             else next(invalidCreds)
         })

@@ -1042,11 +1042,13 @@ exports.seed = async function(knex) {
       timestamp: new Date("09-03-2023, 12:00 PM").toLocaleString([], {dateStyle: "short", timeStyle: "short"}),
       notes: "Rain ride!",
       row: 12,
-      seat: 1
+      seat: 1,
+      users_id: 1
     },
     {
       rides_id: 26,
-      timestamp: new Date("09-03-2023, 12:00 PM").toLocaleString([], {dateStyle: "short", timeStyle: "short"})
+      timestamp: new Date("09-03-2023, 12:00 PM").toLocaleString([], {dateStyle: "short", timeStyle: "short"}),
+      users_id: 1
     }
   ])
 };

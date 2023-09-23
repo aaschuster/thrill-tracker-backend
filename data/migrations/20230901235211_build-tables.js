@@ -117,7 +117,7 @@ exports.up = async function(knex) {
                 .onUpdate("RESTRICT");
             table.integer("users_id")
                 .unsigned()
-                // .notNullable()
+                .notNullable()
                 .references("users_id")
                 .inTable("users")
                 .onDelete("RESTRICT")
