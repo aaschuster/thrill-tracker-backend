@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const Users = require("../models/users");
-const {validateLogin} = require("../middleware");
+const {validateLogin, validateUser} = require("../middleware");
 
 router.post("/login", validateLogin, async (req, res, next) => {
 
@@ -18,16 +18,16 @@ router.post("/login", validateLogin, async (req, res, next) => {
 
     Users.getBy({username: username})
         .then( ([user]) => {
-            if(bcrypt.compareSync(password, user.password)) return res.json({
+            if(user && bcrypt.compareSync(password, user.password)) res.json({
                 message: "Login successful",
                 token: token
             })
             else next(invalidCreds)
         })
-        .catch(next(invalidCreds));
+        .catch(next);
 })
 
-router.post("/", (req, res, next) => {
+router.post("/", validateUser, (req, res, next) => {
 
     let {username, password, email} = req.body;
 
