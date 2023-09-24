@@ -1,6 +1,5 @@
 const cors = require("cors");
 const session = require("express-session");
-const Store = require("connect-session-knex")(session);
 const express = require("express");
 
 const sessionConfig = {
@@ -12,14 +11,7 @@ const sessionConfig = {
     },
     httpOnly: true,
     resave: false,
-    saveUninitialized: false,
-    store: new Store({
-        knex: require("./data/dbconfig"),
-        tablename: "sessions",
-        sidfieldname: "sid",
-        createtable: true,
-        clearInterval: 1000 * 60 * 60 * 24 * 15 //15days
-      })
+    saveUninitialized: false
 };
 
 const server = express();

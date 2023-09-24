@@ -30,6 +30,12 @@ router.post("/login", validateLogin, async (req, res, next) => {
         .catch(next);
 })
 
+router.get("/current", (req, res, next) => {
+    if(req.session.user) {
+        res.json({ user: req.session.user })
+    } else(res.json({ user: {} }))
+})
+
 router.get("/logout", (req, res, next) => {
     if(req.session.user) {
         req.session.destroy(err => {
