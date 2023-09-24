@@ -18,14 +18,30 @@ router.post("/login", validateLogin, async (req, res, next) => {
 
     Users.getBy({username: username})
         .then( ([user]) => {
-            if(user && bcrypt.compareSync(password, user.password)) res.json({
-                message: "Login successful",
-                token: token,
-                user: user
-            })
+            if(user && bcrypt.compareSync(password, user.password)) {
+                req.session.user = user;
+                res.status(200).json({
+                    message: "Login successful",
+                    user: user
+                })
+            }
             else next(invalidCreds)
         })
         .catch(next);
+})
+
+router.get("/logout", (req, res, next) => {
+    if(req.session.user) {
+        req.session.destroy(err => {
+            if(err) {
+                res.json({ message: "There was an issue logging out."});
+            } else {
+                res.json({ message: "Logout successful."});
+            }
+        })
+    } else {
+        res.json({ message: "No user logged in."});
+    }
 })
 
 router.post("/", validateUser, (req, res, next) => {
