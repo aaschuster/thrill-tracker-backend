@@ -198,7 +198,8 @@ exports.seed = async function(knex) {
       drop_height: 200,
       parks_id: 1,
       rows: 12,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     { 
       name: "Maverick",
@@ -209,7 +210,8 @@ exports.seed = async function(knex) {
       drop_height: 100,
       parks_id: 1,
       rows: 6,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     { 
       name: "Top Thrill Dragster",
@@ -220,7 +222,8 @@ exports.seed = async function(knex) {
       drop_height: 400,
       parks_id: 1,
       rows: 9,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     { 
       name: "Top Thrill 2",
@@ -231,7 +234,8 @@ exports.seed = async function(knex) {
       drop_height: 400,
       parks_id: 1,
       rows: 10,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Millennium Force",
@@ -242,7 +246,8 @@ exports.seed = async function(knex) {
       drop_height: 300,
       parks_id: 1,
       rows: 18,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Valravn",
@@ -253,7 +258,8 @@ exports.seed = async function(knex) {
       drop_height: 214,
       parks_id: 1,
       rows: 3,
-      seats: 8
+      seats: 8,
+      maindb: true
     },
     {
       name: "Gatekeeper",
@@ -264,7 +270,8 @@ exports.seed = async function(knex) {
       drop_height: 164,
       parks_id: 1,
       rows: 8,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Raptor",
@@ -275,7 +282,8 @@ exports.seed = async function(knex) {
       drop_height: 119,
       parks_id: 1,
       rows: 8,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Rougarou",
@@ -286,7 +294,8 @@ exports.seed = async function(knex) {
       drop_height: 137,
       parks_id: 1,
       rows: 8,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Magnum XL-200",
@@ -297,7 +306,8 @@ exports.seed = async function(knex) {
       drop_height: 194.7,
       parks_id: 1,
       rows: 18,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Gemini",
@@ -308,7 +318,8 @@ exports.seed = async function(knex) {
       drop_height: 118,
       parks_id: 1,
       rows: 15,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Blue Streak",
@@ -319,7 +330,8 @@ exports.seed = async function(knex) {
       drop_height: 72,
       parks_id: 1,
       rows: 12,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Cedar Creek Mine Ride",
@@ -329,7 +341,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 1,
       rows: 15,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Corkscrew",
@@ -339,7 +352,8 @@ exports.seed = async function(knex) {
       inversions: 3,
       parks_id: 1,
       rows: 12,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Iron Dragon",
@@ -349,7 +363,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 1,
       rows: 14,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Wild Mouse",
@@ -359,7 +374,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 1,
       rows: 1,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Wilderness Run",
@@ -369,7 +385,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 1,
       rows: 8,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Woodstock Express",
@@ -379,45 +396,53 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 1,
       rows: 8,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "4x4's",
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Atomic Scrambler",
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Cadillac Cars",
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Cedar Point and Lake Erie Railroad",
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "MaxAir",
       manufacturers_id: 11,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Power Tower",
       manufacturers_id: 12,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },    
     {
       name: "Skyhawk",
       manufacturers_id: 12,
       inversions: 0,
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Kingda Ka",
@@ -428,7 +453,8 @@ exports.seed = async function(knex) {
       drop_height: 418,
       parks_id: 2,
       rows: 10,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "El Toro",
@@ -439,7 +465,8 @@ exports.seed = async function(knex) {
       drop_height: 176,
       parks_id: 2,
       rows: 18,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Batman The Ride",
@@ -449,7 +476,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 2,
       rows: 8,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Dark Knight",
@@ -459,7 +487,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 2,
       rows: 1,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Green Lantern",
@@ -470,7 +499,8 @@ exports.seed = async function(knex) {
       drop_height: 144,
       parks_id: 2,
       rows: 7,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Harley Quinn Crazy Train",
@@ -480,7 +510,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 2,
       rows: 20,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Jersey Devil Coaster",
@@ -490,7 +521,8 @@ exports.seed = async function(knex) {
       inversions: 3,
       parks_id: 2,
       rows: 12,
-      seats: 1
+      seats: 1,
+      maindb: true
     },
     {
       name: "Joker",
@@ -499,7 +531,8 @@ exports.seed = async function(knex) {
       drop_height: 54,
       parks_id: 2,
       rows: 2,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Lil' Devil Coaster",
@@ -509,7 +542,8 @@ exports.seed = async function(knex) {
       inversions: 0,
       parks_id: 2,
       rows: 6,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Medusa",
@@ -520,7 +554,8 @@ exports.seed = async function(knex) {
       drop_height: 132,
       parks_id: 2,
       rows: 8,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Nitro",
@@ -531,7 +566,8 @@ exports.seed = async function(knex) {
       drop_height: 215,
       parks_id: 2,
       rows: 9,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Runaway Mine Train",
@@ -541,7 +577,8 @@ exports.seed = async function(knex) {
       drop_height: 39,
       parks_id: 2,
       rows: 15,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Skull Mountain",
@@ -552,7 +589,8 @@ exports.seed = async function(knex) {
       drop_height: 37,
       parks_id: 2,
       rows: 14,
-      seats: 2
+      seats: 2,
+      maindb: true
     },
     {
       name: "Superman - Ultimate Flight",
@@ -563,96 +601,116 @@ exports.seed = async function(knex) {
       drop_height: 100,
       parks_id: 2,
       rows: 8,
-      seats: 4
+      seats: 4,
+      maindb: true
     },
     {
       name: "Air Jumbo",
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Big Wheel",
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Cyborg Cyber Spin",
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Justice League: Battle for Metropilis",
       manufacturers_id: 13,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "SkyScreamer",
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Twister",
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Wonder Woman Lasso of Truth",
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Zumanjaro: Drop of Doom",
       manufacturers_id: 15,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Flash: Vertical Velocity",
       manufacturers_id: 24,
       track_length: 1430.4,
       inversions: 0,
-      parks_id: 2
+      parks_id: 2,
+      maindb: true
     },
     {
       name: "Bloodbath",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Midnight",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Fearground Freakshow",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Slaughter House",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "The Haunting of Eerie Estate",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Clownz: Death Metal Tour",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Blood on the Bayou",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "CornStalkers 2.0: Revenge of the Pumpkin Heads",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Cut Throat Cove",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     },
     {
       name: "Tombstone Terror-tory",
-      parks_id: 1
+      parks_id: 1,
+      maindb: true
     }
   ])
   await knex("rides_ride_types").insert([
