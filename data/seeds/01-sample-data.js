@@ -81,42 +81,49 @@ exports.seed = async function(knex) {
       name: "Cedar Point",
       chains_id: 1,
       states_id: 35,
-      countries_id: 1
+      countries_id: 1,
+      maindb: true
     },
     {
       name: "Six Flags Great Adventure",
       chains_id: 2,
       states_id: 30,
-      countries_id: 1
+      countries_id: 1,
+      maindb: true
     },
     {
       name: "Busch Gardens Tampa",
       chains_id: 4,
       states_id: 9,
-      countries_id: 1
+      countries_id: 1,
+      maindb: true
     },
     {
       name: "Alton Towers",
       chains_id: 7,
-      countries_id: 2
+      countries_id: 2,
+      maindb: true
     },
     {
       name: "Dollywood",
       chains_id: 3,
       states_id: 42,
-      countries_id: 1
+      countries_id: 1,
+      maindb: true
     },
     {
       name: "Disneyland",
       chains_id: 6,
       states_id: 5,
-      countries_id: 1
+      countries_id: 1,
+      maindb: true
     },
     {
       name: "Universal Hollywood",
       chains_id: 5,
       states_id: 5,
-      countries_id: 1
+      countries_id: 1,
+      maindb: true
     }
   ])
   await knex("manufacturers").insert([

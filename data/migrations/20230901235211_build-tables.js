@@ -44,6 +44,15 @@ exports.up = async function(knex) {
                 .inTable("countries")
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");
+            table.integer("users_id")
+                .unsigned()
+                .references("users_id")
+                .inTable("users")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.boolean("maindb")
+                .notNullable()
+                .defaultTo(0)
         })
         .createTable("manufacturers", table => {
             table.increments("manufacturers-id")
@@ -76,6 +85,15 @@ exports.up = async function(knex) {
                 .unsigned()
             table.integer("seats")
                 .unsigned()
+            table.integer("users_id")
+                .unsigned()
+                .references("users_id")
+                .inTable("users")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.boolean("maindb")
+                .notNullable()
+                .defaultTo(0)
         })
         .createTable("ride_types", table => {
             table.increments("ride_types_id");
