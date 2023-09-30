@@ -39,6 +39,7 @@ exports.up = async function(knex) {
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");
             table.integer("countries_id")
+                .notNullable()
                 .unsigned()
                 .references("countries_id")
                 .inTable("countries")
@@ -53,6 +54,10 @@ exports.up = async function(knex) {
             table.boolean("maindb")
                 .notNullable()
                 .defaultTo(0)
+            table.string("city")
+                .notNullable()
+            table.integer("opened")
+                .unsigned()
         })
         .createTable("manufacturers", table => {
             table.increments("manufacturers-id")

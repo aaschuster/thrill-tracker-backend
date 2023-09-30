@@ -82,48 +82,70 @@ exports.seed = async function(knex) {
       chains_id: 1,
       states_id: 35,
       countries_id: 1,
-      maindb: true
+      maindb: true,
+      city: "Sandusky",
+      opened: 1870
     },
     {
       name: "Six Flags Great Adventure",
       chains_id: 2,
       states_id: 30,
       countries_id: 1,
-      maindb: true
+      maindb: true,
+      city: "Jackson", 
+      opened: 1974
     },
     {
       name: "Busch Gardens Tampa",
       chains_id: 4,
       states_id: 9,
       countries_id: 1,
-      maindb: true
+      maindb: true,
+      city: "Tampa",
+      opened: 1959
     },
     {
       name: "Alton Towers",
       chains_id: 7,
       countries_id: 2,
-      maindb: true
+      maindb: true,
+      city: "Alton",
+      opened: 1980
     },
     {
       name: "Dollywood",
       chains_id: 3,
       states_id: 42,
       countries_id: 1,
-      maindb: true
+      maindb: true,
+      city: "Pigeon Forge",
+      opened: 1961
     },
     {
       name: "Disneyland",
       chains_id: 6,
       states_id: 5,
       countries_id: 1,
-      maindb: true
+      maindb: true,
+      city: "Anaheim",
+      opened: 1955
     },
     {
-      name: "Universal Hollywood",
+      name: "Universal Studios Hollywood",
       chains_id: 5,
       states_id: 5,
       countries_id: 1,
-      maindb: true
+      maindb: true,
+      city: "Universal City",
+      opened: 1964
+    },
+    {
+      name: "Thorpe Park",
+      chains_id: 7,
+      countries_id: 2,
+      maindb: true,
+      city: "Chertsey",
+      opened: 1979
     }
   ])
   await knex("manufacturers").insert([
