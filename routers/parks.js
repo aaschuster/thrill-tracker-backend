@@ -15,4 +15,10 @@ router.get("/:id", (req, res, next) => {
         .catch(next);
 })
 
+router.post("/", (req, res, next) => {
+    Parks.insert(req.body)
+        .then( parkID => res.json(parkID))
+        .catch(next);
+})
+
 module.exports = router;
