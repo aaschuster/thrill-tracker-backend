@@ -15,4 +15,10 @@ router.get("/:id", (req, res, next) => {
         .catch(next);
 })
 
+router.post("/", (req, res, next) => {
+    Chains.insert(req.body)
+        .then( chainID => res.json(chainID))
+        .catch(next);
+})
+
 module.exports = router;
