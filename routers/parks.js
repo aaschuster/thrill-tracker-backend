@@ -21,4 +21,10 @@ router.post("/", (req, res, next) => {
         .catch(next);
 })
 
+router.put("/:id", (req, res, next) => {
+    Parks.update(req.body, req.params.id)
+        .then( numUpdated => res.json(numUpdated))
+        .catch(next);
+})
+
 module.exports = router;

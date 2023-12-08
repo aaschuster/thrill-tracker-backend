@@ -10,3 +10,7 @@ module.exports.get = id => {
 module.exports.insert = newPark => {
     return db("parks").insert(newPark);
 }
+
+module.exports.update = (park, id) => {
+    return db("parks").where("parks_id", id).update(park);
+}
