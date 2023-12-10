@@ -49,6 +49,9 @@ server.use("/history", historyRouter);
 const usersRouter = require("./routers/users");
 server.use("/users", usersRouter);
 
+const manufacturersRouter = require("./routers/manufacturers");
+server.use("/manufacturers", manufacturersRouter);
+
 server.use((err, req, res, next) => {
     res.status(err.status || 500).json({
         customMessage: "There was an issue with the server",
