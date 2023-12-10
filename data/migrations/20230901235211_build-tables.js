@@ -60,7 +60,7 @@ exports.up = async function(knex) {
                 .unsigned()
         })
         .createTable("manufacturers", table => {
-            table.increments("manufacturers-id")
+            table.increments("manufacturers_id")
             table.string("name");
         })
         .createTable("rides", table => {

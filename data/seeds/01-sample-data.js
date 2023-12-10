@@ -13,7 +13,8 @@ exports.seed = async function(knex) {
     {name: "Busch-SeaWorld"},   //id4
     {name: "Universal"},        //id5
     {name: "Disney"},           //id6
-    {name: "Merlin"}            //id7
+    {name: "Merlin"},            //id7
+    {name: "Fun Spot America"} //id8
   ])
   await knex("countries").insert([
     {name: "USA"},        //id1
@@ -146,7 +147,89 @@ exports.seed = async function(knex) {
       maindb: true,
       city: "Chertsey",
       opened: 1979
-    }
+    },
+    {
+      name: "SeaWorld Orlando",
+      chains_id: 4,
+      states_id: 9,
+      countries_id: 1,
+      maindb: true,
+      city: "Orlando",
+      opened: 1973
+    },
+    {
+      name: "Busch Gardens Williamsburg",
+      chains_id: 4,
+      states_id: 46,
+      countries_id: 1,
+      maindb: true,
+      city: "Williamsburg",
+      opened: 1975
+    },
+    {
+      name: "Silver Dollar City",
+      chains_id: 3,
+      states_id: 25,
+      countries_id: 1,
+      maindb: true,
+      city: "Branson",
+      opened: 1960
+    },
+    {
+      name: "Dollywood",
+      chains_id: 3,
+      states_id: 42,
+      countries_id: 1,
+      maindb: true,
+      city: "Pigeon Forge",
+      opened: 1961
+    },
+    {
+      name: "Six Flags Over Georgia",
+      chains_id: 2,
+      states_id: 10,
+      countries_id: 1,
+      maindb: true,
+      city: "Austell",
+      opened: 1967
+    },
+    {
+      name: "Six Flags Over Texas",
+      chains_id: 2,
+      states_id: 43,
+      countries_id: 1,
+      maindb: true,
+      city: "Arlington",
+      opened: 1961
+    },
+    {
+      name: "Six Flags Fiesta Texas",
+      chains_id: 2,
+      states_id: 43,
+      countries_id: 1,
+      maindb: true,
+      city: "San Antonio",
+      opened: 1992
+    },
+    {
+      name: "Carowinds",
+      chains_id: 1,
+      states_id: 33,
+      countries_id: 1,
+      maindb: true,
+      city: "Charlotte",
+      opened: 1973
+    },
+    {
+      name: "Fun Spot America Atlanta",
+      chains_id: 8,
+      states_id: 10,
+      countries_id: 1,
+      maindb: true,
+      city: "Fayetteville",
+      opened: 1990
+    },
+
   ])
   await knex("manufacturers").insert([
     {name: "Chance Rides"}, //id	1
