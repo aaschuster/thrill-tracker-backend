@@ -6,3 +6,7 @@ module.exports.get = id => {
     }
     return db("rides")
 }
+
+module.exports.insert = newRide => {
+    return db("rides").insert(newRide);
+}

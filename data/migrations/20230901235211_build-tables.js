@@ -84,6 +84,8 @@ exports.up = async function(knex) {
                 .unsigned()
             table.integer("inversions")
                 .unsigned()
+            table.decimal("ride_height")
+                .unsigned()
             table.decimal("drop_height")
                 .unsigned()
             table.integer("rows")
