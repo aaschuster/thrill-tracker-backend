@@ -9,4 +9,10 @@ router.get("/", (req, res, next) => {
         .catch(next);
 })
 
+router.post("/", (req, res, next) => {
+    Manufacturers.insert(req.body)
+        .then( manufacturerID => res.json(manufacturerID))
+        .catch(next);
+})
+
 module.exports = router;
