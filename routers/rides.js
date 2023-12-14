@@ -21,4 +21,10 @@ router.post("/", (req, res, next) => {
         .catch(next);
 })
 
+router.put("/:id", (req, res, next) => {
+    Rides.update(req.body)
+        .then( numUpdated => res.json(numUpdated))
+        .catch(next);
+})
+
 module.exports = router;
