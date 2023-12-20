@@ -130,6 +130,12 @@ exports.up = async function(knex) {
             table.string("email")
                 .unique();
             table.string("password");
+            table.boolean("kmh")
+                .notNullable()
+                .defaultTo(0);
+            table.boolean("meters")
+                .notNullable()
+                .defaultTo(0);
         })
         .createTable("history", table => {
             table.increments("history_id");
@@ -155,6 +161,40 @@ exports.up = async function(knex) {
             table.integer("seat")
                 .unsigned();
         })  
+        .createTable("user_park_favorites", table => {
+            table.increments("user_park_favorites_id");
+            table.integer("users_id")
+                .unsigned()
+                .notNullable()
+                .references("users_id")
+                .inTable("users")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.integer("parks_id")
+                .unsigned()
+                .notNullable()
+                .references("parks_id")
+                .inTable("parks")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+        })
+        .createTable("user_ride_favorites", table => {
+            table.increments("user_ride_favorites_id");
+            table.integer("users_id")
+                .unsigned()
+                .notNullable()
+                .references("users_id")
+                .inTable("users")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.integer("rides_id")
+                .unsigned()
+                .notNullable()
+                .references("rides_id")
+                .inTable("rides")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");            
+        })
 };
 
 /**

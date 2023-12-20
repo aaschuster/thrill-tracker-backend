@@ -843,6 +843,127 @@ exports.seed = async function(knex) {
       name: "Tombstone Terror-tory",
       parks_id: 1,
       maindb: true
+    },
+    {
+      name: "Iron Gwazi",
+      parks_id: 3,
+      manufacturers_id: 41,
+      duration: 110,
+      track_length: 4075,
+      inversions: 2,
+      ride_height: 206,
+      drop_height: 206,
+      rows: 12,
+      seats: 2,
+      maindb: true
+    },
+    {
+      name: "Kumba",
+      parks_id: 3,
+      manufacturers_id: 29,
+      duration: 174,
+      track_length: 3978,
+      inversions: 7,
+      ride_height: 143,
+      drop_height: 135,
+      rows: 8,
+      seats: 4,
+      maindb: true
+    },
+    {
+      name: "Cheetah Hunt",
+      parks_id: 3,
+      manufacturers_id: 15,
+      track_length: 4429,
+      inversions: 1,
+      ride_height: 102,
+      drop_height: 130,
+      rows: 8,
+      seats: 2,
+      maindb: true
+    },
+    {
+      name: "Montu",
+      parks_id: 3,
+      manufacturers_id: 29,
+      duration: 180,
+      track_length: 4429,
+      inversions: 7,
+      ride_height: 150,
+      drop_height: 130,
+      rows: 8,
+      seats: 4,
+      maindb: true
+    },
+    {
+      name: "Scorpion",
+      parks_id: 3,
+      manufacturers_id: 44,
+      duration: 90,
+      track_length: 1817.6,
+      inversions: 1,
+      ride_height: 60.7,
+      rows: 10,
+      seats: 2,
+      maindb: true
+    },
+    {
+      name: "Tigris",
+      parks_id: 3,
+      manufacturers_id: 40,
+      track_length: 863,
+      inversions: 1,
+      ride_height: 150,
+      rows: 10,
+      seats: 2,
+      maindb: true
+    },
+    {
+      name: "SheiKra",
+      parks_id: 3,
+      manufacturers_id: 29,
+      duration: 140,
+      track_length: 3188,
+      inversions: 1,
+      ride_height: 200,
+      rows: 3,
+      seats: 8,
+      maindb: true
+    },
+    {
+      name: "Galactica",
+      parks_id: 4,
+      manufacturers_id: 29,
+      duration: 100,
+      track_length: 2755.9,
+      inversions: 2,
+      ride_height: 65.6,
+      rows: 7,
+      seats: 4,
+      maindb: true
+    },
+    {
+      name: "Wicker Man",
+      parks_id: 4,
+      manufacturers_id: 15,
+      duration: 210,
+      track_length: 2608.3,
+      inversions: 0,
+      drop_height: 72.2,
+      rows: 12,
+      seats: 2,
+      maindb: true
+    },
+    {
+      name: "Th13teen",
+      parks_id: 4,
+      manufacturers_id: 15,
+      track_length: 2480.3,
+      inversions: 0,
+      ride_height: 65.6,
+      rows: 10,
+      seats: 2,
+      maindb: true
     }
   ])
   await knex("rides_ride_types").insert([
