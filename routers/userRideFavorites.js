@@ -3,8 +3,8 @@ const router = express.Router();
 
 const UserRideFavorites = require("../models/userRideFavorites");
 
-router.get("/", (req, res, next) => {
-    UserRideFavorites.get()
+router.get("/:userID", (req, res, next) => {
+    UserRideFavorites.get(req.params.userID)
         .then( rideFavorites => res.json(rideFavorites))
         .catch(next);
 })

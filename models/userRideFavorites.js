@@ -1,7 +1,7 @@
 const db = require("../data/dbconfig");
 
-module.exports.get = () => {
-    return db("user_ride_favorites");
+module.exports.get = userID => {
+    return db("user_ride_favorites").where("users_id", userID);
 }
 
 module.exports.insert = userRideFavorite => {
