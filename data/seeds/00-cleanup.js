@@ -3,6 +3,8 @@
  * @returns { Promise<void> } 
  */
 exports.seed = async function(knex) {
+  await knex("user_ride_favorites").truncate();
+  await knex("user_park_favorites").truncate();
   await knex("history").truncate();
   await knex("users").truncate();
   await knex("rides_ride_types").truncate();

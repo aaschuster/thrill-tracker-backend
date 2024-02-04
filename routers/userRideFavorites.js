@@ -5,7 +5,7 @@ const UserRideFavorites = require("../models/userRideFavorites");
 
 router.get("/:userID", (req, res, next) => {
     UserRideFavorites.get(req.params.userID)
-        .then( rideFavorites => res.json(rideFavorites.map( favoriteObj => favoriteObj.rides_id)))
+        .then( rideFavorites => res.json(rideFavorites))
         .catch(next);
 })
 
