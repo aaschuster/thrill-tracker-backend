@@ -195,6 +195,23 @@ exports.up = async function(knex) {
                 .onDelete("RESTRICT")
                 .onUpdate("RESTRICT");            
         })
+        .createTable("user_home_parks", table => {
+            table.increments("user_home_parks_id");
+            table.integer("users_id")
+                .unsigned()
+                .notNullable()
+                .references("users_id")
+                .inTable("users")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+            table.integer("parks_id")
+                .unsigned()
+                .notNullable()
+                .references("parks_id")
+                .inTable("parks")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
+        })
 };
 
 /**
@@ -203,6 +220,9 @@ exports.up = async function(knex) {
  */
 exports.down = async function(knex) {
     await knex.schema
+    .dropTableIfExists("user_home_parks")
+    .dropTableIfExists("user_ride_favorites")
+    .dropTableIfExists("user_park_favorites")
     .dropTableIfExists("history")
     .dropTableIfExists("users")
     .dropTableIfExists("rides_ride_types")

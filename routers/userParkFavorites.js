@@ -3,8 +3,8 @@ const router = express.Router();
 
 const UserParkFavorites = require("../models/userParkFavorites");
 
-router.get("/", (req, res, next) => {
-    UserParkFavorites.get()
+router.get("/:userID", (req, res, next) => {
+    UserParkFavorites.get(req.params.userID)
         .then( parkFavorites => res.json(parkFavorites) )
         .catch(next);
 })
