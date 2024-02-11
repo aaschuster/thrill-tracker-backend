@@ -64,6 +64,9 @@ server.use("/userparkfavorites", userParkFavorites);
 const userRideFavorites = require("./routers/userRideFavorites");
 server.use("/userridefavorites", userRideFavorites);
 
+const userHomeParks = require("./routers/userHomeParks");
+server.use("/userhomeparks", userHomeParks);
+
 server.use((err, req, res, next) => {
     res.status(err.status || 500).json({
         customMessage: "There was an issue with the server",
