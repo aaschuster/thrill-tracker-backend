@@ -54,6 +54,12 @@ exports.up = async function(knex) {
             table.boolean("maindb")
                 .notNullable()
                 .defaultTo(0)
+            table.integer("update_of_parks_id")
+                .unsigned()
+                .references("parks_id")
+                .inTable("parks")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
             table.string("city")
                 .notNullable()
             table.integer("opened")
