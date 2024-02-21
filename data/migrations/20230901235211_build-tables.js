@@ -107,6 +107,12 @@ exports.up = async function(knex) {
             table.boolean("maindb")
                 .notNullable()
                 .defaultTo(0)
+            table.integer("update_of_rides_id")
+                .unsigned()
+                .references("rides_id")
+                .inTable("rides")
+                .onDelete("RESTRICT")
+                .onUpdate("RESTRICT");
         })
         .createTable("ride_types", table => {
             table.increments("ride_types_id");
